@@ -1,0 +1,15 @@
+AddDefaultCharset UTF-8
+RewriteEngine On
+
+RewriteBase /
+ErrorDocument 403 /index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+Options All -Indexes
+Options -Includes
+Options +FollowSymlinks
+
+RewriteRule ^(app/|database/|resources/|routes/|cache/|vendor/\.*) - [F,L,NC]
+RewriteRule ^(.*\.lock|.*\.json|.*.htaccess) - [F,L,NC]

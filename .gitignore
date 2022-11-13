@@ -1,0 +1,4 @@
+/vendor/
+/cache/
+/.idea/
+/public/js/jquery.min.js

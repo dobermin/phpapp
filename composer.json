@@ -1,0 +1,12 @@
+{
+  "require": {
+    "jenssegers/blade": "^1.4",
+    "ext-json": "*",
+    "components/jquery": "^3.6.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"copy(__DIR__ . '/vendor/components/jquery/jquery.min.js',__DIR__ . '/public/js/jquery.min.js');\""
+    ]
+  }
+}
